@@ -1,77 +1,72 @@
-﻿// See https://aka.ms/new-console-template for more information
-//int mark = int.Parse(Console.ReadLine());
-//if (mark >= 50)
-//{
-//    Console.WriteLine("pass");
-//}
-//else if (mark < 50 && mark >= 0)
-//{
-//    Console.WriteLine("Fail");
-//}
-//else
-//{
-//    Console.WriteLine("invalid marks");
-//}
-////switch
-//Console.Write("Enter your grade:");
-//char grade=char.Parse(Console.ReadLine());
-//switch (grade)
-//{
-//    case 'A':Console.WriteLine("Excellent"); break;
-//    case 'B':Console.WriteLine("Well Done"); break;
-//    case 'C':Console.WriteLine("Still Ok"); break;
-//    case 'D': Console.WriteLine("You need to work hard"); break;
-//    case 'E':Console.WriteLine("too bad"); break;
-//    default:Console.WriteLine("invalid grade");
-//        break;
-//}
-//namespace Uni
-//{
-//    class Student
-//    {
-//        public string name = "Mg mg";
-//        public int age = 23;
-//        public void display()
-//        {
-//            Console.WriteLine("Hello Student, Welcome for C# class");
-//            Console.WriteLine("Student Information");
-//            Console.WriteLine("Name: " + name);
-//            Console.WriteLine("Age: " + age);
-//        }
-//    }
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            Student student = new Student();
-//            student.display();
-//            Console.ReadLine();
-//        }
-//    }
-//}
-//class Person
-//{
-//    public void SHow() {
-//        Console.WriteLine("Name:su su");
-//    }
-//}
-//class Program : Person
-//{
-//    public new void SHow()
-//    {
-//        Console.WriteLine("Name: mama");
-//}
-//    static void Main(string[] args)
-//    {
-//        Program p=new Program();
-//        p.SHow();
-//        Console.ReadLine();
-//    }
-//}
-//class Program
-//{
-//    private static void SendEmails(string message,params string[] args)
-//    {
-      
-//    }
-//}
+﻿using System;
+
+namespace Uni
+{
+    // Base class Shape with protected integer attributes width and height
+    class Shape
+    {
+        protected int width;
+        protected int height;
+
+        // Two-argument constructor
+        public Shape(int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+        }
+
+        // Virtual method Area that can be overridden by derived classes
+        public virtual int Area()
+        {
+            return width * height; // default area behavior
+        }
+    }
+
+    // Rectangle inherits from Shape
+    class Rectangle : Shape
+    {
+        public Rectangle(int width, int height) : base(width, height)
+        {
+        }
+
+        // Override Area for rectangle (width * height)
+        public override int Area()
+        {
+            return width * height;
+        }
+    }
+
+    // Triangle inherits from Shape
+    class Triangle : Shape
+    {
+        public Triangle(int width, int height) : base(width, height)
+        {
+        }
+
+        // Override Area for triangle (width * height / 2)
+        public override int Area()
+        {
+            return (width * height) / 2;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ENter the width");
+            int width = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the height");
+            int height = Convert.ToInt32(Console.ReadLine());
+            Rectangle rc=new Rectangle(width, height);
+            Triangle triangle=new Triangle(width, height);
+            var tri = new Triangle(width, height);
+
+            Console.WriteLine("Rectangle area: "+rc.Area());
+            Console.WriteLine($"Triangle area: {tri.Area()}");
+
+            Console.WriteLine("Press Enter to exit...");
+            Console.ReadLine();
+        }
+    }
+}
