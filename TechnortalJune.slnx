@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="TechnortalJune.ConsoleApp/TechnortalJune.ConsoleApp.csproj" />
+  <Project Path="TechnortalJune.OOP/TechnortalJune.OOP.csproj" Id="b63d9c8f-851d-4e94-96f3-3602b8db31b9" />
   <Project Path="Uni.ConsoleApp/Uni.ConsoleApp.csproj" Id="ba88b54d-8111-46d3-89f7-347445613613" />
 </Solution>

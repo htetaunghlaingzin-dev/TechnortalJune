@@ -10,15 +10,21 @@ namespace TechnortalJune.ConsoleApp
 {
     internal class AdoDotNetService
     {
+        private readonly SqlConnectionStringBuilder sb;
+        AdoDotNetService()
+        {
+            sb = new SqlConnectionStringBuilder
+            {
+                DataSource = ".",
+                InitialCatalog = "June2026",
+                UserID = "sa",
+                Password = "ZwehtetZ@18",
+                TrustServerCertificate = true
+            };
+        }
+
         public void Read()
         {
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
-            sb.DataSource = ".";
-            sb.InitialCatalog = "June2026";
-            sb.UserID = "sa";
-            sb.Password = "ZwehtetZ@18";
-            sb.TrustServerCertificate = true;
-
             SqlConnection connection = new SqlConnection(sb.ConnectionString);
             Console.WriteLine("Connection String: " + sb.ConnectionString);
             Console.WriteLine("Connection opening...");
@@ -58,13 +64,6 @@ namespace TechnortalJune.ConsoleApp
         }
         public void Create()
         {
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
-            sb.DataSource = ".";
-            sb.InitialCatalog = "June2026";
-            sb.UserID = "sa";
-            sb.Password = "ZwehtetZ@18";
-            sb.TrustServerCertificate = true;
-
             SqlConnection connection = new SqlConnection(sb.ConnectionString);
             Console.WriteLine("Connection String: " + sb.ConnectionString);
             Console.WriteLine("Connection opening...");
@@ -96,13 +95,6 @@ VALUES
         }
         public void Update()
         {
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
-            sb.DataSource = ".";
-            sb.InitialCatalog = "June2026";
-            sb.UserID = "sa";
-            sb.Password = "ZwehtetZ@18";
-            sb.TrustServerCertificate = true;
-
             SqlConnection connection = new SqlConnection(sb.ConnectionString);
             Console.WriteLine("Connection String: " + sb.ConnectionString);
             Console.WriteLine("Connection opening...");
@@ -125,13 +117,6 @@ WHERE StudentNo = 'STU020';
         }
         public void Delete()
         {
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
-            sb.DataSource = ".";
-            sb.InitialCatalog = "June2026";
-            sb.UserID = "sa";
-            sb.Password = "ZwehtetZ@18";
-            sb.TrustServerCertificate = true;
-
             SqlConnection connection = new SqlConnection(sb.ConnectionString);
             Console.WriteLine("Connection String: " + sb.ConnectionString);
             Console.WriteLine("Connection opening...");
