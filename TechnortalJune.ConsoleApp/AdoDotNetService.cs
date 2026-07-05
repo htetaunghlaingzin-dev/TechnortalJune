@@ -11,7 +11,7 @@ namespace TechnortalJune.ConsoleApp
     internal class AdoDotNetService
     {
         private readonly SqlConnectionStringBuilder sb;
-        AdoDotNetService()
+        public AdoDotNetService()
         {
             sb = new SqlConnectionStringBuilder
             {
@@ -21,7 +21,7 @@ namespace TechnortalJune.ConsoleApp
                 Password = "ZwehtetZ@18",
                 TrustServerCertificate = true
             };
-        }
+        } 
 
         public void Read()
         {
