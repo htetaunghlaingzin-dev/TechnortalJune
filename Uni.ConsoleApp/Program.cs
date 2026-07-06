@@ -2,51 +2,58 @@
 
 namespace Uni
 {
-    // Base class Shape with protected integer attributes width and height
-    class Shape
+    // Rectangle with protected double attributes length and width
+    class Rectangle
     {
-        protected int width;
-        protected int height;
+        protected double length;
+        protected double width;
 
         // Two-argument constructor
-        public Shape(int width, int height)
+        public Rectangle(double length, double width)
         {
+            this.length = length;
             this.width = width;
-            this.height = height;
         }
 
-        // Virtual method Area that can be overridden by derived classes
-        public virtual int Area()
+        // GetArea method returns area as double
+        public virtual double GetArea()
         {
-            return width * height; // default area behavior
-        }
-    }
-
-    // Rectangle inherits from Shape
-    class Rectangle : Shape
-    {
-        public Rectangle(int width, int height) : base(width, height)
-        {
+            return length * width;
         }
 
-        // Override Area for rectangle (width * height)
-        public override int Area()
+        // Display method prints length, width and area
+        public virtual void Display()
         {
-            return width * height;
+            Console.WriteLine($"Length: {length}");
+            Console.WriteLine($"Width: {width}");
+            Console.WriteLine($"Area: {GetArea():F2}");
         }
     }
 
-    // Triangle inherits from Shape
-    class Triangle : Shape
+    // Tabletop inherits from Rectangle and adds a private cost attribute
+    class Tabletop : Rectangle
     {
-        public Triangle(int width, int height) : base(width, height)
+        private double cost;
+        private const double unitPrice = 20.0; // price per square unit
+
+        // Two-argument constructor accepting length and width
+        public Tabletop(double length, double width) : base(length, width)
         {
+            // calculate and store cost
+            this.cost = GetCost();
         }
 
-        // Override Area for triangle (width * height / 2)
-        public override int Area()
+        // GetCost calculates cost based on area and returns double
+        public double GetCost()
         {
-            return (width * height) / 2;
+            return GetArea() * unitPrice;
+        }
+
+        // Display method outputs length, width, area and cost
+        public override void Display()
+        {
+            base.Display();
+            Console.WriteLine($"Cost: {cost:C2}");
         }
     }
 
@@ -54,16 +61,9 @@ namespace Uni
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ENter the width");
-            int width = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the height");
-            int height = Convert.ToInt32(Console.ReadLine());
-            Rectangle rc=new Rectangle(width, height);
-            Triangle triangle=new Triangle(width, height);
-            var tri = new Triangle(width, height);
-
-            Console.WriteLine("Rectangle area: "+rc.Area());
-            Console.WriteLine($"Triangle area: {tri.Area()}");
+            // Create a Tabletop instance and display information
+            var tabletop = new Tabletop(2.5, 1.2);
+            tabletop.Display();
 
             Console.WriteLine("Press Enter to exit...");
             Console.ReadLine();
