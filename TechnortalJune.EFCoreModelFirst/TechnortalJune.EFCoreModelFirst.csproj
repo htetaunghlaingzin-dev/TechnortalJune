@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\June2026.DatabaseFirstEFCore\TechnortalJune.DatabaseFirstEFCore.csproj" />
+  </ItemGroup>
+
 </Project>

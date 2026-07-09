@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="June2026.DatabaseFirstEFCore/TechnortalJune.DatabaseFirstEFCore.csproj" Id="c8b27078-f05b-4dee-8331-48ebd73c6393" />
   <Project Path="TechnortalJune.ConsoleApp/TechnortalJune.ConsoleApp.csproj" />
   <Project Path="TechnortalJune.ConsoleDapperApp/TechnortalJune.ConsoleDapperApp.csproj" Id="4ab00fc6-5489-4de7-b7e1-ecc2c6a59fb5" />
   <Project Path="TechnortalJune.EFCoreModelFirst/TechnortalJune.EFCoreModelFirst.csproj" Id="47d9737c-6bac-4023-aeb6-1ccd92000154" />
