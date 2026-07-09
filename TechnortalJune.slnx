@@ -1,8 +1,10 @@
 <Solution>
   <Project Path="TechnortalJune.ConsoleApp/TechnortalJune.ConsoleApp.csproj" />
   <Project Path="TechnortalJune.ConsoleDapperApp/TechnortalJune.ConsoleDapperApp.csproj" Id="4ab00fc6-5489-4de7-b7e1-ecc2c6a59fb5" />
+  <Project Path="TechnortalJune.EFCoreModelFirst/TechnortalJune.EFCoreModelFirst.csproj" Id="47d9737c-6bac-4023-aeb6-1ccd92000154" />
   <Project Path="TechnortalJune.OOP/TechnortalJune.OOP.csproj" Id="b63d9c8f-851d-4e94-96f3-3602b8db31b9" />
   <Project Path="testing/testing.csproj" Id="41e6b598-d2ff-4c59-9c5a-1bd62f9b0c99" />
   <Project Path="testing1/testing1.csproj" Id="0266d1d9-d375-40e7-93df-f4d7c2539012" />
   <Project Path="Uni.ConsoleApp/Uni.ConsoleApp.csproj" Id="ba88b54d-8111-46d3-89f7-347445613613" />
+  <Project Path="UniAssignment/UniAssignment.csproj" Id="44ef5019-61e5-4ce9-b3c8-5611e9a7a321" />
 </Solution>
